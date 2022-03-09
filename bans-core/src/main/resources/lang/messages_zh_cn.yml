@@ -33,7 +33,7 @@ all:
     enable: true
 
    # 假如一名玩家输入了 /libertybans 但没有权限 'libertybans.commands', 这是反馈的信息
-  base-permission-message: '&c您没有相应的权限那么做。'
+  base-permission-message: '&c您没有相应的权限。'
   usage: '&c未知子命令. 示例用法 :'
    # 发出命令时，如果找不到指定的玩家或IP，应该显示怎样的错误信息？
   not-found:
@@ -57,8 +57,8 @@ additions:
       - '&7%REASON%'
     permission:
       duration: '&c您无法的设置有效期为 &e%DURATION%&c 的惩罚。'
-      uuid: '&c您可能无法警告别的玩家。'
-      ip-address: '&c您无法通过 IP 来警告别的玩家。'
+      uuid: '&c您可能无法警告该玩家。'
+      ip-address: '&c您无法通过 IP 来警告该玩家。'
 
     usage: '&c用法: /warn &e<player> [有效时长] <理由>&c。'
     success:
@@ -74,7 +74,7 @@ additions:
       - '&7%REASON%'
     usage: '&c用法: /kick &e<玩家> <理由>&c。'
     permission:
-      uuid: '&c您没有权限踢出别的玩家。'
+      uuid: '&c您没有权限踢出该玩家。'
       ip-address: '&c您没有按 IP 来踢出玩家的权限。'
 
     success:
@@ -95,9 +95,9 @@ additions:
       - '&c网站: &7链接&f'
       - '&cDiscord: &7discord&f'
     permission:
-      duration: '&c您不能为别的玩家设置时长为 &e%DURATION%&c 的封禁。'
-      uuid: '&c您没有权限封禁别的玩家。'
-      ip-address: '&c您没有通过 IP 封禁别的玩家的权限。'
+      duration: '&c您不能为该玩家设置时长为 &e%DURATION%&c 的封禁。'
+      uuid: '&c您没有权限封禁该玩家。'
+      ip-address: '&c您没有通过 IP 封禁该玩家的权限。'
 
     usage: '&c用法: /ban &e<玩家> [有效时长] <理由>&c。'
     success:
@@ -114,9 +114,9 @@ additions:
       - '&c&l原因&f'
       - '&7%REASON%'
     permission:
-      duration: '&c您无法为别的玩家设置有效时长为 &e%DURATION%&c 的禁言。'
-      uuid: '&c您没有权限禁言别的玩家。'
-      ip-address: '&c您没有通过 IP 禁言别的玩家的权限。'
+      duration: '&c您无法为该玩家设置有效时长为 &e%DURATION%&c 的禁言。'
+      uuid: '&c您没有权限禁言该玩家。'
+      ip-address: '&c您没有通过 IP 禁言该玩家的权限。'
 
     usage: '&c用法: /mute &e<玩家> [有效时长] <理由>&c。'
     success:
@@ -191,7 +191,7 @@ lists:
     usage: '&c用法: /mutelist &e[页码]'
     maxPages: '&7页码 &e%PAGE%&7 并不存在。'
     permission:
-      command: '&7您没有权限查看别的玩家的禁言记录。'
+      command: '&7您没有权限查看该玩家的禁言记录。'
 
     noPages: '&7这里还没有禁言记录。'
 
@@ -281,7 +281,7 @@ removals:
     not-a-number: '&c&o%ID_ARG%&7 不是一个数字。'
     usage: '&c用法: /unwarn &e<玩家> <id>&c。'
     permission:
-      uuid: '&c您没有权限撤销别的玩家的警告。'
+      uuid: '&c您没有权限撤销该玩家的警告。'
       ip-address: '&c您没有通过 IP 撤销警告的权限。'
 
     not-found: '&c&o%TARGET%&7 并没有受到 ID 为 &c&o%ID%&7 的警告。'
@@ -293,7 +293,7 @@ removals:
   bans:
     usage: '&c用法: /unban &e<玩家>&c。'
     permission:
-      uuid: '&c您没有权限撤销别的玩家的封禁。'
+      uuid: '&c您没有权限撤销该玩家的封禁。'
       ip-address: '&c您没有权限撤销IP封禁。'
 
     not-found: '&c&o%TARGET%&7 还没被封禁。'
